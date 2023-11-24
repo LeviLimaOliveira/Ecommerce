@@ -64,9 +64,14 @@ img {
 i {
     font-family: sans-serif;
     text-decoration: none;
+    cursor: pointer;
 }
 
 h1{
     font-family: 'Lobster', sans-serif;
     font-size: 60px;
+}
+
+p{
+    cursor: pointer;
 }
