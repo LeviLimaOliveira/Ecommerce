@@ -1,13 +1,31 @@
 body{
-    background-color: #00a2ff;
+    background-color: #1e1e1e;
     font: normal 15pt arial;
 
 }
 
 header{
+    background-color: #a30000;
     color:white;
     text-align: center;
-    text-shadow: 5px 5px 10px #161515e1;;
+    text-shadow: 5px 5px 10px #161515e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 10px;
+    width: 30%;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px 3px #000000;
 }
 
 section {
