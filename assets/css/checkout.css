@@ -92,4 +92,20 @@ input[type="submit"]:hover {
     height: 200px;
     margin-top: 20px;
     border-radius: 5px;
+    display: none;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tam{
+    display: flex;
+    justify-content: end;
+    width: 10px;
+
 }
