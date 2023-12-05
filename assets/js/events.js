@@ -7,8 +7,8 @@ function alteraBandeira() {
  let primeiroNumero = numero.value.substring(0, 1)
 
   if (primeiroNumero == '4') {
-    band.innerHTML = `<img src='/assets/img/visa.png'>`
+    band.innerHTML = `<img src='../img/visa.png'>`
   } else if (primeiroNumero == '5') {
-    band.innerHTML = `<img src='/assets/img/mastercard.png'>`
+    band.innerHTML = `<img src='../img/mastercard.png'>`
   }
 }

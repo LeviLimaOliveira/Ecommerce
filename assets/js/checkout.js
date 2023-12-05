@@ -75,7 +75,9 @@ let ano = document.getElementById('ano')
 
 let anoAtual = new Date().getFullYear();
 
-for (let i = 0; i <= 10; i++) {
+ano.innerHTML += `<option value=${anoAtual}>${anoAtual}</option>`;
+
+for (let i = 0; i < 10; i++) {
     anoAtual++
     ano.innerHTML += `<option value=${anoAtual}>${anoAtual}</option>`
 }

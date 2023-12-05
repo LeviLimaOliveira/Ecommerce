@@ -74,7 +74,7 @@ function carregar() {
     <h5 class="card-title"><strong>${listaProdutos[i].nome}</strong></h5>
     <p class="card-text">${listaProdutos[i].descricao}</p>
     <p class="card-text">${listaProdutos[i].preco}</p>
-    <a href="#" class="btn btn-primary">Comprar</a>
+    <a href="../html/checkout.html"" class="btn btn-primary">Comprar</a>
   </div>
 </div>`
     }
