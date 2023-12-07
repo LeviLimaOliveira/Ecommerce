@@ -82,6 +82,87 @@ for (let i = 0; i < 10; i++) {
     ano.innerHTML += `<option value=${anoAtual}>${anoAtual}</option>`
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Adiciona um ouvinte de eventos para o input 'numero'
+    var numeroInput = document.getElementById('numero');
+    numeroInput.addEventListener('input', function() {
+      // Obtém o valor digitado no input 'numero' e remove caracteres não numéricos
+      var numeroDigitado = numeroInput.value.replace(/\D/g, '');
 
+      if (numeroDigitado === '') {
+        numeroDigitado = '0000000000000000';
+      }
+  
+      // Limita o número de dígitos a 16
+      numeroDigitado = numeroDigitado.slice(0, 16);
+  
+      // Formata o valor como um número de cartão de crédito
+      numeroDigitado = numeroDigitado.replace(/(\d{4})/g, '$1 ').trim();
+  
+      // Atualiza o conteúdo na div 'cardNumero'
+      var cardNumero = document.getElementById('cardNumero');
+      cardNumero.textContent = numeroDigitado;
+    });
+  
+    // Adiciona um ouvinte de eventos para o evento "keydown" para impedir a entrada de não números
+    numeroInput.addEventListener('keydown', function(e) {
+      // Permite apenas números e as teclas de controle (por exemplo, backspace, delete)
+      if (!(e.key === 'Backspace' || e.key === 'Delete' || (e.key >= '0' && e.key <= '9'))) {
+        e.preventDefault();
+      }
+    });
+  });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    // Adiciona um ouvinte de eventos para o input 'Titular'
+    var titularInput = document.getElementById('Titular');
+    titularInput.addEventListener('input', function() {
+      // Obtém o valor digitado no input 'Titular' e remove caracteres não alfabéticos
+      var nomeDigitado = titularInput.value.replace(/[^a-zA-ZÀ-ÿ ]/g, '');
+
+      if (nomeDigitado === '') {
+        nomeDigitado = 'NOME DO TITULAR';
+      }
+      // Atualiza o conteúdo na div 'cardNome'
+      var cardNome = document.getElementById('cardNome');
+      cardNome.textContent = nomeDigitado.toUpperCase();
+    });
+  
+    // Adiciona um ouvinte de eventos para o evento "keydown" no input 'Titular' para impedir a entrada de números
+    titularInput.addEventListener('keydown', function(e) {
+      // Permite apenas letras e espaços
+      if (!((e.key >= 'A' && e.key <= 'Z') || (e.key >= 'a' && e.key <= 'z') || e.key === ' ')) {
+        e.preventDefault();
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Adiciona ouvintes de eventos para os inputs 'mes' e 'ano'
+    var mesInput = document.getElementById('mes');
+    var anoInput = document.getElementById('ano');
+
+    mesInput.addEventListener('change', function() {
+      atualizaMesAno();
+      alteraCartao(); // Adiciona essa linha para atualizar a bandeira quando o mês é alterado
+    });
+
+    anoInput.addEventListener('change', function() {
+      atualizaMesAno();
+      alteraCartao(); // Adiciona essa linha para atualizar a bandeira quando o ano é alterado
+    });
+
+    function atualizaMesAno() {
+      var mesSelecionado = mesInput.selectedIndex;
+      var anoSelecionado = anoInput.value.slice(-2); // Pega os dois últimos dígitos do ano
+
+      // Adiciona um zero à esquerda se o mês for menor que 10
+      var mesFormatado = (mesSelecionado).toString().padStart(2, '0');
+
+      var mesanoDiv = document.getElementById('mesano');
+      mesanoDiv.textContent = mesFormatado + '/' + anoSelecionado;
+    }
+});
+  
 

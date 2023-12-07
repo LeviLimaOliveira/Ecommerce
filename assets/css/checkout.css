@@ -7,6 +7,7 @@
 body {
     font-family: sans-serif;
     background:	#fffffffe;
+    margin: 0px 180px;
 }
 
 .container {
@@ -116,3 +117,15 @@ select {
     top: 15px;
     left: 290px;
     }
+
+div #cardNumero, #cardNome{
+    padding-left: 15px;
+    color: white;
+}
+
+div #mesano {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
