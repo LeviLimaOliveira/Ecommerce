@@ -164,5 +164,51 @@ document.addEventListener('DOMContentLoaded', function() {
       mesanoDiv.textContent = mesFormatado + '/' + anoSelecionado;
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var cvcInput = document.getElementById('cvc');
+  var frenteDiv = document.getElementById('frente');
+  var versoDiv = document.getElementById('verso');
+
+  cvcInput.addEventListener('input', function () {
+    // Substituir não números por uma string vazia
+    cvcInput.value = cvcInput.value.replace(/\D/g, '');
+
+    // Limitar o comprimento a 3 caracteres
+    cvcInput.value = cvcInput.value.slice(0, 3);
+
+    // Atualizar o conteúdo do verso com o que está sendo digitado
+    versoDiv.innerText = cvcInput.value;
+  });
+
+  cvcInput.addEventListener('focus', function () {
+    // Quando o input CVC recebe foco, oculte a frente e mostre o verso
+    frenteDiv.style.display = 'none';
+    versoDiv.style.display = 'block';
+  });
+
+  cvcInput.addEventListener('blur', function () {
+    // Quando o input CVC perde foco, volte a mostrar a frente e ocultar o verso
+    frenteDiv.style.display = 'block';
+    versoDiv.style.display = 'none';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var cpfInput = document.getElementById('cpf');
+
+  cpfInput.addEventListener('input', function () {
+    // Substituir não números por uma string vazia
+    cpfInput.value = cpfInput.value.replace(/\D/g, '');
+
+    // Limitar o comprimento a 11 dígitos
+    cpfInput.value = cpfInput.value.slice(0, 11);
+  });
+});
+
+
+
+
+
   
 

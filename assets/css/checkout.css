@@ -93,8 +93,14 @@ input[type="submit"]:hover {
     height: 200px;
     margin-top: 20px;
     border-radius: 5px;
+    color: white;
+    padding: 20px;
     display: none;
 }
+
+.hidden {
+    display: none;
+  }
 
 select {
     width: 100%;
@@ -128,4 +134,8 @@ div #mesano {
     display: flex;
     justify-content: flex-end;
     padding-right: 10px;
+}
+
+span {
+    display: none;
 }

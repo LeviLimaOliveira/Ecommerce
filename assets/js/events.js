@@ -12,3 +12,4 @@ function alteraBandeira() {
     band.innerHTML = `<img src='../img/mastercard.png'>`
   }
 }
+
