@@ -1,6 +1,36 @@
 let lista = document.getElementById('lista')
 
-window.addEventListener('load', carregaProdutos);
+window.addEventListener('load', carregaSite);
+
+function carregaSite() {
+  carregaProdutos();
+  carragaLightMode();
+}
+
+function carragaLightMode() {
+let status = localStorage.getItem('light-mode')
+if(status == 'ativado') {
+  document.getElementById('corpo').classList.add('light-mode');
+} else {
+  document.getElementById('corpo').classList.remove('light-mode');
+}
+}
+
+document.getElementById('interruptor').addEventListener('click', interuuptor)
+
+function interuuptor() {
+  let status = localStorage.getItem('light-mode')
+  if (status == 'ativado') {
+    document.getElementById('corpo').classList.add('light-mode');
+    localStorage.setItem('light-mode', 'desativado');
+  } else {
+    document.getElementById('corpo').classList.add('light-mode');
+    localStorage.setItem('light-mode', 'ativado');
+  }
+
+  
+}
+
 
 function carregaProdutos() {
 
@@ -23,6 +53,7 @@ function carregaProdutos() {
   }
   )
 }
+
 
 
 

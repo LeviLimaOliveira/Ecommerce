@@ -75,3 +75,8 @@ h1{
 p{
     cursor: pointer;
 }
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
