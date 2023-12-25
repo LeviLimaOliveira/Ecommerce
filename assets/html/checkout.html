@@ -15,26 +15,26 @@
       <div>
         <form class="form">
           <label for="numero">Número</label>
-          <input class="required" type="text" onkeyup="alteraBandeira()" id="numero"  placeholder="Ex: 0000 0000 0000 0000">
+          <input class="required" type="text" onkeyup="alteraBandeira()" id="numero"  placeholder="Ex: 0000 0000 0000 0000" oninput="numeroValidade()">
           <span class="span-required">Número deve conter 16 caracteres</span>
           <label for="Titular">Titular</label>
-          <input class="required" type="text" id="Titular" oninput="nameValidate()" placeholder="Ex: LEVI DE LIMA">
+          <input class="required" type="text" id="Titular" oninput="nameValidate()" placeholder="Ex: LEVI DE LIMA" oninput="nameValidate()">
           <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
           <label for="mes">Mês</label>
-          <select class="required" id="mes">
+          <select class="select-required" id="mes">
           <span class="span-required">selecione o mês</span>
           <option value="">---Selecione---</option>
           </select>
           <label for="ano">Ano</label>
-          <select class="required" id="ano">
-          <span class="span-required">selecione o ano</span>
+          <select class="select-required" id="ano" onselect="mesValidade()">
+          <span class="span-required">selecione o Ano</span>
           <option value="">---Selecione---</option>
           </select>
           <label for="cvc">CVC</label>
-          <input class="required" type="text" id="cvc" placeholder="Ex: 000">
+          <input class="required" type="text" id="cvc" placeholder="Ex: 000" oninput="cvcValidate()">
           <span class="span-required">Cvc deve ter no mínimo 3 caracteres</span>
           <label for="cpf">CPF</label>
-          <input class="required" type="text" id="cpf" placeholder="000.000.000-00">
+          <input class="required" type="text" id="cpf" placeholder="000.000.000-00" oninput="cpfValidate()">
           <span class="span-required">CPF deve ter no mínimo 11 caracteres</span>
           <input type="submit" value="Pronto">
         </form>

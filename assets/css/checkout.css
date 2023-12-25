@@ -35,10 +35,14 @@ form {
     width: 200%;;
 }
 
+input{
+    outline: none;;
+}
+
 input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -108,6 +112,7 @@ select {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    outline: none;
 }
 
 .tam{
@@ -137,5 +142,7 @@ div #mesano {
 }
 
 span {
+    font-size: 12px;
     display: none;
+    color:#e63636;
 }
