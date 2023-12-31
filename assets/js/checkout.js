@@ -210,6 +210,14 @@ const form = document.getElementById('form')
 const campos = document.querySelectorAll('.required')
 const spans = document.querySelectorAll('.span-required')
 
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  numeroValidade()
+  nameValidate()
+  cvcValidate()
+  cpfValidate()
+});
+
 function setError(index) {
   campos[index].style.border = '1px solid #e63636';
   spans[index].style.display = 'block';
@@ -251,9 +259,4 @@ function cpfValidate() {
     removeError(3)
   }
 }
-
-
-
-
-  
 

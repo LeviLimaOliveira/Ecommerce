@@ -13,7 +13,7 @@
     <hr>
     <div class="form-container">
       <div>
-        <form class="form">
+        <form class="form" id="form">
           <label for="numero">Número</label>
           <input class="required" type="text" onkeyup="alteraBandeira()" id="numero"  placeholder="Ex: 0000 0000 0000 0000" oninput="numeroValidade()">
           <span class="span-required">Número deve conter 16 caracteres</span>
@@ -26,7 +26,7 @@
           <option value="">---Selecione---</option>
           </select>
           <label for="ano">Ano</label>
-          <select class="select-required" id="ano" onselect="mesValidade()">
+          <select class="select-required" id="ano" onchange="mesValidade()">
           <span class="span-required">selecione o Ano</span>
           <option value="">---Selecione---</option>
           </select>
@@ -40,6 +40,14 @@
         </form>
       </div>
       <div class="container">
+        <div class="container">
+          <div>
+              <h2>Carinho de compras</h2>
+              <hr>
+              <div>Produto</div>
+              <hr>
+          </div>
+        </div>
         <div id="card">
           <div id="frente">
             <div class="tam" id="band"></div>

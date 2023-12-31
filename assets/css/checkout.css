@@ -15,7 +15,8 @@ body {
     padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .form-container {
@@ -145,4 +146,4 @@ span {
     font-size: 12px;
     display: none;
     color:#e63636;
-}
+}   
